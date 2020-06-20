@@ -1,26 +1,49 @@
 <!DOCTYPE html>
-<html>
   <html lang="en">
     <head>
        <meta charset="UTF-8">
        <title>Hello, I am Leesa Raby</title>
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" type="text/css" href="./dist/css/main.css"/>
+       <link ref="shortcut icon" href="images/favicon.ico">
+       <!-- Used to get the page to respond to breakpoints -->
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
-    <body>
-        <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="resume.html">Resume</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav>
 
-          <p>
-            <img  
-                style="border-radius: 50%; float: right; margin-left: 1em;"
-                src="https://www.gravatar.com/avatar/4678a33bf44c38e54a58745033b4d5c6?d=mm&s=64" 
-                alt="Leesa Raby">
-          <h1>Hello, I am Leesa Raby</h1>
-          <p>I am a full stack developer skilled in HTML, CSS, and JavaScript</p>
+    <body>
+      <header>
+        <span class="logo">My WebSite</span>
+        <!-- control to toggle the menu on smaller screens -->
+        <a id="toggleMenu">Menu<a></a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <h1>Hello, I am Leesa Raby</h1>
+          <img class="avatar" src="https://www.gravatar.com/userimage/188060386/a48df5240a956c66ba10757d15a55711?size=64" alt="Leesa Raby">
+        <p>I am a full stack developer skilled in HTML, CSS, and JavaScript</p>
+     </main>
+     
+     <script>
+
+      var toggleMenu = document.getElementById('toggleMenu');
+      var nav = document.querySelector('nav');
+      toggleMenu.addEventListener(
+        'click',
+        function(){
+          if(nav.style.display=='block'){
+            nav.style.display='none';
+          }else{
+            nav.style.display='block';
+          }
+        }
+      );
+    </script>
+    
     </body>
 </html>
